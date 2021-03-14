@@ -7,7 +7,7 @@ services:
       build:
         - npm install
       start:
-        - PORT=80 node ./index.js
+        - PORT=80 node ./server.js
   database:
     image: tugboatqa/postgres:13
     environment:
