@@ -1,0 +1,13 @@
+services:
+  app:
+    image: tugboatqa/node:14
+    default: true
+    depends: database
+    commands:
+      build:
+        - npm install
+  database:
+    image: tugboatqa/postgres:13
+    environment:
+      POSTGRES_DB: "todos"
+      POSTGRES_PASSWORD: "password"
